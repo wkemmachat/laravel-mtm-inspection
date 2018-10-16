@@ -1,0 +1,12 @@
+# HOW TO install
+
+composer install
+php artisan key:generate
+php artisan migrate:fresh --seed
+copy .evn and change database name and password
+
+
+Database set up
+php artisan make:migration create_inspection_data_table
+input data
+php artisan migrate
