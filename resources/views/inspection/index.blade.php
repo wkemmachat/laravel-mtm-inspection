@@ -11,6 +11,9 @@
             $retest_date_send_back = "";
         }
 
+
+
+
 ?>
 
 @extends('layouts.app')
@@ -25,7 +28,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="d-flex align-items-center">
-                        <h2 class="text-center">Inspection Data</h2>
+                        <h2 class="text-center">Inspection Data </h2>
                         <div class="ml-auto">
                             {{--  <a href="{{ route('questions.create') }}" class="btn btn-outline-secondary">Ask Question</a>  --}}
                         </div>
@@ -321,7 +324,14 @@
                                 <td class="text-center">{{$inspectionInLoop->volumn1}}</td>
                                 <td class="text-center">{{$inspectionInLoop->volumn2}}</td>
                                 <td class="text-center">{{$inspectionInLoop->pass_or_not}}</td>
-                                <td class="text-center">del</td>
+                                <td class="text-center">
+                                        {{-- <button type="button" class="btn btn-danger btn-sm">x</button> --}}
+                                        <form class="form-delete" method="post" action="{{ route('inspection.delete', [$inspectionInLoop->id]) }}">
+                                            @method('DELETE')
+                                            @csrf
+                                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">x</button>
+                                        </form>
+                                </td>
                             </tr>
                         @endforeach
 

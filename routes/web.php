@@ -11,16 +11,21 @@
 |
 */
 
-Route::get('/', 'InspectionController@index')->name('inspection.index')->middleware('auth');
 
 Auth::routes();
 
 Route::post('/inspection', 'InspectionController@store')->name('inspection.store')->middleware('auth');
+Route::delete('/inspection/delete/{inspection}', 'InspectionController@destroy')->name('inspection.delete')->middleware('auth');
+Route::get('/inspection_data', 'InspectionController@data')->name('inspection.data')->middleware('auth');
+
+
+
 
 Route::get('/logout','LogoutController@index')->name('logout.logout');
 
 Route::get('/test','TestController@index')->name('test');
 
+Route::get('/', 'InspectionController@index')->name('inspection.index')->middleware('auth');
 
 
 
@@ -40,6 +45,7 @@ Route::get('exportExamplePhpSpreadSheet', 'MaatwebsiteDemoController@exportExamp
 
 
 /*
+
 Route::get('/', 'QuestionsController@index');
 
 Auth::routes();

@@ -60,12 +60,11 @@
                             <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                             <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                         @else
+                            <li><a class="nav-link" href="{{ route('inspection.data') }}"><font color='green'>Inspection Data</font></a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link " href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     <font color='blue'>{{ Auth::user()->name }}</font> <span class="caret"></span>
                                 </a>
-
-
                             </li>
                             <li><a class="nav-link" href="{{ route('logout.logout') }}">Logout</a></li>
                         @endguest

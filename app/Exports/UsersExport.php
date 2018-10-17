@@ -23,9 +23,19 @@ class UsersExport implements FromCollection, WithHeadings
     //     return User::all();
     // }
 
+    private $user;
+
     public function collection()
     {
-        return User::all();
+        return $this->$user = User::all();
+    }
+
+    public function map($user): array
+    {
+        return [
+            $this->$user->invoice_number,
+            Date::dateTimeToExcel($invoice->created_at),
+        ];
     }
 
     public function headings(): array
