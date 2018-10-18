@@ -22,7 +22,7 @@ class InspectionController extends Controller
     {
         // $questions = Question::with('user')->latest()->paginate(10);
 
-        return view('inspection.index') ->with('inspectionArray',Inspection::orderby('created_at', 'desc')->take(2)->get());
+        return view('inspection.index') ->with('inspectionArray',Inspection::orderby('created_at', 'desc')->take(10)->get());
 
     }
 
@@ -30,7 +30,7 @@ class InspectionController extends Controller
     {
         // $questions = Question::with('user')->latest()->paginate(10);
         // $posts = Post::orderBy('id', 'desc')->paginate(6);
-        $inspectionArray = Inspection::orderBy('created_at', 'desc')->paginate(2);
+        $inspectionArray = Inspection::orderBy('created_at', 'desc')->paginate(10);
 
 
         return view('inspection.data') ->with('inspectionArray',$inspectionArray);
@@ -43,7 +43,7 @@ class InspectionController extends Controller
         $inspection->delete();
         Session::flash('success', 'You succesfully delete data.');
 
-        return view('inspection.index') ->with('inspectionArray',Inspection::orderby('created_at', 'desc')->take(2)->get());
+        return view('inspection.index') ->with('inspectionArray',Inspection::orderby('created_at', 'desc')->take(10)->get());
 
 
     }
@@ -86,19 +86,19 @@ class InspectionController extends Controller
             if(strcasecmp($request->hydro_or_expand ,'expand')==0){
                 if(strlen(trim($request->volumn1))==0||strlen(trim($request->volumn2))==0){
                     Session::flash('error', 'Please fill V1 and V2');
-                    return view('inspection.index')->with('inspectionArray',Inspection::orderby('created_at', 'desc')->take(2)->get());
+                    return view('inspection.index')->with('inspectionArray',Inspection::orderby('created_at', 'desc')->take(10)->get());
 
                 }
             }
 
             if(strlen(trim($request->serial_number))<>12){
                 Session::flash('error', 'Serial is invalid');
-                return view('inspection.index')->with('inspectionArray',Inspection::orderby('created_at', 'desc')->take(2)->get());
+                return view('inspection.index')->with('inspectionArray',Inspection::orderby('created_at', 'desc')->take(10)->get());
             }
 
             if(strlen(trim($request->manu_month_year))<>5){
                 Session::flash('error', 'Manufacturing month and year is invalid');
-                return view('inspection.index')->with('inspectionArray',Inspection::orderby('created_at', 'desc')->take(2)->get());
+                return view('inspection.index')->with('inspectionArray',Inspection::orderby('created_at', 'desc')->take(10)->get());
             }
 
             try {
@@ -106,7 +106,7 @@ class InspectionController extends Controller
             }
             catch (\Exception $e) {
                 Session::flash('error', 'Retest date is invalid');
-                return view('inspection.index')->with('inspectionArray',Inspection::orderby('created_at', 'desc')->take(2)->get());
+                return view('inspection.index')->with('inspectionArray',Inspection::orderby('created_at', 'desc')->take(10)->get());
             }
 
             $inspection = new Inspection();
@@ -128,7 +128,7 @@ class InspectionController extends Controller
             // dd($request->factory_name);
             // $request->user()->inspections()->create($request->only('size', date("d-m-Y", strtotime($request->retest_date))));
             Session::flash('success', 'Your inspection has been submitted');
-            return view('inspection.index')->with('inspectionArray',Inspection::orderby('created_at', 'desc')->take(2)->get())
+            return view('inspection.index')->with('inspectionArray',Inspection::orderby('created_at', 'desc')->take(10)->get())
                                            ->with('factory_name_send_back',$request->factory_name)
                                            ->with('size_send_back',$request->size)
                                            ->with('retest_date_send_back',$request->retest_date);
