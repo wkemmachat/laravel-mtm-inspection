@@ -8,7 +8,9 @@ use App\Inspection;
 use Illuminate\Http\Request;
 use App\Http\Requests\AskQuestionRequest;
 use Carbon\Carbon;
-
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\InspectionsExport;
+use App\Exports\UsersExport;
 use Session;
 
 class InspectionController extends Controller
@@ -35,6 +37,16 @@ class InspectionController extends Controller
 
         return view('inspection.data') ->with('inspectionArray',$inspectionArray);
 
+    }
+
+    public function exportInspection(Request $request)
+    {
+        return Excel::download(new InspectionsExport($request), 'inspections.xlsx');
+    }
+
+    public function exportUser()
+    {
+        return Excel::download(new UsersExport, 'users.xlsx');
     }
 
     public function destroy(Inspection $inspection)

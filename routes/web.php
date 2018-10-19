@@ -17,6 +17,7 @@ Auth::routes();
 Route::post('/inspection', 'InspectionController@store')->name('inspection.store')->middleware('auth');
 Route::delete('/inspection/delete/{inspection}', 'InspectionController@destroy')->name('inspection.delete')->middleware('auth');
 Route::get('/inspection_data', 'InspectionController@data')->name('inspection.data')->middleware('auth');
+Route::get('/inspection_data', 'InspectionController@data')->name('inspection.data')->middleware('auth');
 
 
 
@@ -28,7 +29,11 @@ Route::get('/test','TestController@index')->name('test');
 Route::get('/', 'InspectionController@index')->name('inspection.index')->middleware('auth');
 
 
+Route::post('/exportInspection', 'InspectionController@exportInspection')->name('inspection.exportInspection');
 
+Route::get('/exportUser', 'InspectionController@exportUser')->name('inspection.exportUser');
+
+/*
 
 Route::get('importExport', 'MaatwebsiteDemoController@importExport');
 
@@ -41,7 +46,7 @@ Route::get('exportUser', 'MaatwebsiteDemoController@exportUser');
 Route::get('exportUserByExportable', 'MaatwebsiteDemoController@exportUserByExportable');
 
 Route::get('exportExamplePhpSpreadSheet', 'MaatwebsiteDemoController@exportExamplePhpSpreadSheet');
-
+*/
 
 
 /*

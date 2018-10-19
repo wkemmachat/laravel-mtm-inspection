@@ -23,6 +23,27 @@
 
         @include ('layouts._messages')
 
+    <div class="card">
+        <h5 class="card-header">Export To Excel</h5>
+        <div class="card-body">
+            <form action="{{ route('inspection.exportInspection') }}" method="post">
+                @csrf
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault01">Start Date</label>
+                        <input type="text" class="form-control datepicker" id="startDate" name="startDate" placeholder="Start Date" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault02">End Date</label>
+                        <input type="text" class="form-control datepicker" id="endDate" name="endDate" placeholder="End Date" value="" required>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit form</button>
+            </form>
+        </div>
+    </div>
+
+
 
     @if(!empty($inspectionArray))
         <div class="mt-3">
@@ -41,6 +62,7 @@
                     <th class="text-center" scope="col">V1</th>
                     <th class="text-center" scope="col">V2</th>
                     <th class="text-center" scope="col">Pass</th>
+                    <th class="text-center" scope="col">User</th>
                     <th class="text-center" scope="col">Del</th>
                 </tr>
                 </thead>
@@ -59,6 +81,8 @@
                                 <td class="text-center">{{$inspectionInLoop->volumn1}}</td>
                                 <td class="text-center">{{$inspectionInLoop->volumn2}}</td>
                                 <td class="text-center">{{$inspectionInLoop->pass_or_not}}</td>
+                                <td class="text-center">{{$inspectionInLoop->user->name}}</td>
+
                                 <td class="text-center">
                                         {{-- <button type="button" class="btn btn-danger btn-sm">x</button> --}}
                                         <form class="form-delete" method="post" action="{{ route('inspection.delete', [$inspectionInLoop->id]) }}">

@@ -100,6 +100,10 @@
             dateFormat: 'dd-mm-yy'
         });
 
+        $('.datepicker').datepicker({
+            dateFormat: 'dd-mm-yy'
+        });
+
         $('.serialmask').mask('0000-000-000');
         $('.manu_month_year').mask('00-00');
 
