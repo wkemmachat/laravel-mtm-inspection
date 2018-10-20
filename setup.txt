@@ -10,3 +10,11 @@ Database set up
 php artisan make:migration create_inspection_data_table
 input data
 php artisan migrate
+
+
+
+#deploy production
+$ php composer install
+$ php composer dumpautoload -o
+$ php artisan config:cache
+$ php artisan route:cache
