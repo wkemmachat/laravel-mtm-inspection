@@ -10,7 +10,8 @@ class Inspection extends Model
     protected $fillable = ['size', 'hydro_or_expand','factory_name'
                             ,'retest_date','manu_month_year'
                             ,'serial_number','manufacturer_name'
-                            ,'pass_or_not','volumn1','volumn2'];
+                            ,'pass_or_not','volumn1','volumn2'
+                            ,'customer_name', 'repair_part' ,'tare_weight' ];
 
 
     protected $dates = ['retest_date'];

@@ -91,7 +91,8 @@ class InspectionController extends Controller
                 'serial_number' => 'required',
                 'manufacturer_name' => 'required',
                 'pass_or_not' => 'required',
-
+                'customer_name' => 'required',
+                'repair_part' => 'required'
             ]);
 
 
@@ -103,10 +104,11 @@ class InspectionController extends Controller
                 }
             }
 
-            if(strlen(trim($request->serial_number))<>12){
-                Session::flash('error', 'Serial is invalid');
-                return view('inspection.index')->with('inspectionArray',Inspection::orderby('created_at', 'desc')->take(10)->get());
-            }
+
+            // if(strlen(trim($request->serial_number))<>12){
+            //     Session::flash('error', 'Serial is invalid');
+            //     return view('inspection.index')->with('inspectionArray',Inspection::orderby('created_at', 'desc')->take(10)->get());
+            // }
 
             if(strlen(trim($request->manu_month_year))<>5){
                 Session::flash('error', 'Manufacturing month and year is invalid');
@@ -121,6 +123,20 @@ class InspectionController extends Controller
                 return view('inspection.index')->with('inspectionArray',Inspection::orderby('created_at', 'desc')->take(10)->get());
             }
 
+            if( strcasecmp($request->customer_name ,'เพชรไทย')==0||
+                strcasecmp($request->customer_name ,'กมลจักรวาล')==0||
+                strcasecmp($request->customer_name ,'จตุรงค์')==0||
+                strcasecmp($request->customer_name ,'กมลจักรวาล')==0){
+                    if(strlen(trim($request->tare_weight))==0){
+                        Session::flash('error', 'Please fill in tare weight');
+                        return view('inspection.index')->with('inspectionArray',Inspection::orderby('created_at', 'desc')->take(10)->get());
+                    }
+            }
+
+            if(strlen(trim($request->tare_weight))==0){
+                $request->tare_weight = 0;
+            }
+
             $inspection = new Inspection();
 
             $inspection->size               = $request->size;
@@ -133,6 +149,9 @@ class InspectionController extends Controller
             $inspection->pass_or_not        = $request->pass_or_not; //"pass";
             $inspection->volumn1            = $request->volumn1; //"10";
             $inspection->volumn2            = $request->volumn2; //"1";
+            $inspection->customer_name      = $request->customer_name; //"PTT";
+            $inspection->repair_part        = $request->repair_part; //"C C+F C+B";
+            $inspection->tare_weight        = $request->tare_weight; //"15.12";
             $inspection->user_id            = $request->user()->id;
 
             $inspection->save();
@@ -143,7 +162,8 @@ class InspectionController extends Controller
             return view('inspection.index')->with('inspectionArray',Inspection::orderby('created_at', 'desc')->take(10)->get())
                                            ->with('factory_name_send_back',$request->factory_name)
                                            ->with('size_send_back',$request->size)
-                                           ->with('retest_date_send_back',$request->retest_date);
+                                           ->with('retest_date_send_back',$request->retest_date)
+                                           ->with('customer_name_send_back',$request->customer_name);
 
         }
 

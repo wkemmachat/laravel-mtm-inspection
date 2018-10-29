@@ -1,15 +1,21 @@
 <?php
-        if(empty($factory_name_send_back)){
-            $factory_name_send_back = "";
-        }
 
-        if(empty($size_send_back)){
-            $size_send_back = "";
-        }
 
-        if(empty($retest_date_send_back)){
-            $retest_date_send_back = "";
-        }
+    if(empty($customer_name_send_back)){
+        $customer_name_send_back = "";
+    }
+
+    if(empty($factory_name_send_back)){
+        $factory_name_send_back = "";
+    }
+
+    if(empty($size_send_back)){
+        $size_send_back = "";
+    }
+
+    if(empty($retest_date_send_back)){
+        $retest_date_send_back = "";
+    }
 
 
 
@@ -41,6 +47,63 @@
 
                         <form action="{{ route('inspection.store') }}" method="post">
                             @csrf
+
+                            <fieldset class="form-group">
+                                <div class="row">
+                                    <legend class="col-form-label col-sm-2 pt-0"><strong><font color="blue">Customer</font></strong> <font color='red'>*</font></legend>
+                                    <div class="col-sm-10">
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="customer_name" id="customer_name" value="PTT"  {{ $customer_name_send_back === "PTT" ? "checked" : "" }} required>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                PTT
+                                            </label>
+                                        </div>
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="customer_name" id="customer_name" value="WG" {{ $customer_name_send_back === "WG" ? "checked" : "" }} >
+                                            <label class="form-check-label" for="gridRadios1">
+                                                WG
+                                            </label>
+                                        </div>
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="customer_name" id="customer_name" value="NS" {{ $customer_name_send_back === "NS" ? "checked" : "" }} >
+                                            <label class="form-check-label" for="gridRadios1">
+                                                NS
+                                            </label>
+                                        </div>
+
+                                        <!-- Amnonia -->
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="customer_name" id="customer_name" value="เพชรไทย" {{ $customer_name_send_back === "เพชรไทย" ? "checked" : "" }} >
+                                            <label class="form-check-label" for="gridRadios1">
+                                                เพชรไทย
+                                            </label>
+                                        </div>
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="customer_name" id="customer_name" value="กมลจักรวาล" {{ $customer_name_send_back === "กมลจักรวาล" ? "checked" : "" }} >
+                                            <label class="form-check-label" for="gridRadios1">
+                                                กมลจักรวาล
+                                            </label>
+                                        </div>
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="customer_name" id="customer_name" value="จตุรงค์" {{ $customer_name_send_back === "จตุรงค์" ? "checked" : "" }} >
+                                            <label class="form-check-label" for="gridRadios1">
+                                                จตุรงค์
+                                            </label>
+                                        </div>
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="customer_name" id="customer_name" value="Brenntag" {{ $customer_name_send_back === "Brenntag" ? "checked" : "" }} >
+                                            <label class="form-check-label" for="gridRadios1">
+                                                Brenntag
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </fieldset>
+
+
 
                                 <fieldset class="form-group">
                                     <div class="row">
@@ -219,11 +282,16 @@
                                     </div>
 
                                 </fieldset>
+
                                 @if ($errors->has('pass_or_not'))
                                 <div class="invalid-feedback">
                                     <strong>{{ $errors->first('pass_or_not') }}</strong>
                                 </div>
                                 @endif
+
+
+
+
 
                                 <div id="expand_div">
                                     <div class="form-group row">
@@ -251,12 +319,67 @@
                                     @endif
                                 </div>
 
+
+                                <fieldset class="form-group">
+                                    <div class="row">
+                                        <legend class="col-form-label col-sm-2 pt-0"><strong><font color="blue">Repair Type</font></strong> <font color='red'>*</font></legend>
+                                        <div class="col-sm-10">
+                                            <div class="form-check custom-control-inline">
+                                                <input class="form-check-input" type="radio" name="repair_part" id="repair_part" value="P" checked required>
+                                                <label class="form-check-label" for="gridRadios1">
+                                                    P
+                                                </label>
+                                            </div>
+                                            <div class="form-check custom-control-inline">
+                                                <input class="form-check-input" type="radio" name="repair_part" id="repair_part" value="C" >
+                                                <label class="form-check-label" for="gridRadios1">
+                                                    C
+                                                </label>
+                                            </div>
+                                            <div class="form-check custom-control-inline">
+                                                <input class="form-check-input" type="radio" name="repair_type" id="repair_part" value="C+F" >
+                                                <label class="form-check-label" for="gridRadios1">
+                                                    C+F
+                                                </label>
+                                            </div>
+                                            <div class="form-check custom-control-inline">
+                                                <input class="form-check-input" type="radio" name="repair_part" id="repair_part" value="B" >
+                                                <label class="form-check-label" for="gridRadios1">
+                                                    B
+                                                </label>
+                                            </div>
+                                            <div class="form-check custom-control-inline">
+                                                <input class="form-check-input" type="radio" name="repair_part" id="repair_part" value="C+B" >
+                                                <label class="form-check-label" for="gridRadios1">
+                                                    C+B
+                                                </label>
+                                            </div>
+                                            <div class="form-check custom-control-inline">
+                                                <input class="form-check-input" type="radio" name="repair_part" id="repair_part" value="F" >
+                                                <label class="form-check-label" for="gridRadios1">
+                                                    F
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </fieldset>
+
+                                <div class="form-group row">
+                                    <label for="volumn2" class="col-sm-2 col-form-label"><strong><font color="green">Tare Weight</font></strong></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="tare_weight" value="" id="tare_weight" class="form-control  {{ $errors->has('tare_weight') ? 'is-invalid' : '' }}" onkeypress="return isNumberKey(event)">
+                                    </div>
+                                </div>
+
+
                                 <fieldset class="form-group">
                                     <div class="row">
                                         <legend class="col-form-label col-sm-2 pt-0"><strong><font color="blue">Result</font></strong> <font color='red'>*</font></legend>
                                         <div class="col-sm-10">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="pass_or_not" id="pass_or_not1" value="pass" required>
+                                                <input class="form-check-input" type="radio" name="pass_or_not" id="pass_or_not1" value="pass" checked required>
                                                 <label class="form-check-label" for="gridRadios1">
                                                     Pass
                                                 </label>
@@ -277,6 +400,7 @@
                                     <strong>{{ $errors->first('pass_or_not') }}</strong>
                                 </div>
                                 @endif
+
 
                                 <div class="form-group ">
                                     <button type="submit" class="btn btn-outline-primary btn-lg">Submit</button>

@@ -81,20 +81,32 @@
 
 
 <script>
-        @if(Session::has('success'))
+        {{-- @if(Session::has('success'))
             toastr.success("{{ Session::get('success') }}")
         @endif
 
         @if(Session::has('info'))
             toastr.info("{{ Session::get('info') }}")
-        @endif
+        @endif --}}
 </script>
 
 @yield('scripts')
 
 <script type="text/javascript">
 
+    function isNumberKey(evt)
+       {
+          var charCode = (evt.which) ? evt.which : evt.keyCode;
+          if (charCode != 46 && charCode > 31
+            && (charCode < 48 || charCode > 57))
+             return false;
+
+          return true;
+       }
+
+
     $( document ).ready(function() {
+
 
         $('#retest_date').datepicker({
             dateFormat: 'dd-mm-yy'
@@ -104,7 +116,7 @@
             dateFormat: 'dd-mm-yy'
         });
 
-        $('.serialmask').mask('0000-000-000');
+        $('.serialmask').mask('AAAA-AAA-AAA');
         $('.manu_month_year').mask('00-00');
 
         $(".numeric_number").keydown(function (e) {
@@ -123,6 +135,8 @@
             }
         });
 
+
+
         $('#expand_radio').click(function(){
             $('#expand_div').show();
         });
@@ -131,6 +145,8 @@
         });
 
         $('#expand_div').hide();
+
+
     });
 
     window.setTimeout(function() {
