@@ -26,15 +26,7 @@
     <link href="{{ asset('assets/jquery-ui-1.12.1/jquery-ui.min.css') }}" rel="stylesheet">
 
 
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <!-- Jquery UI -->
-    <script src="{{ asset('assets/jquery-ui-1.12.1/jquery-ui.min.js') }}" defer></script>
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/toastr.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.mask.js') }}"></script>
+
 </head>
 <body>
     <div id="app">
@@ -60,13 +52,33 @@
                             <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                             <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                         @else
-                            <li><a class="nav-link" href="{{ route('inspection.data') }}"><font color='green'>Inspection Data</font></a></li>
-                            <li class="nav-item dropdown">
+                            <li></li>
+                            {{--  <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link " href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     <font color='blue'>{{ Auth::user()->name }}</font> <span class="caret"></span>
                                 </a>
+                            </li>  --}}
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <font color="green">Data</font>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('inspection.index') }}"><font color='green'>Repair</font></a>
+                                    <a class="dropdown-item" href="{{ route('inspection.data') }}"><font color='green'>Repair Data</font></a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">New Tank</a>
+                                    <a class="dropdown-item" href="#">New Tank Data</a>
+                                </div>
                             </li>
-                            <li><a class="nav-link" href="{{ route('logout.logout') }}">Logout</a></li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <font color='blue'>{{ Auth::user()->name }}</font> <span class="caret"></span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                    <a class="nav-link" href="{{ route('logout.logout') }}">Logout</a>
+                                </div>
+                            </li>
                         @endguest
                     </ul>
                 </div>
@@ -78,6 +90,17 @@
         </main>
     </div>
 </body>
+
+<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/toastr.min.js') }}"></script>
+<script src="{{ asset('js/jquery.mask.js') }}"></script>
+<!-- Scripts -->
+{{--  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>  --}}
+<!-- Jquery UI -->
+<script src="{{ asset('assets/jquery-ui-1.12.1/jquery-ui.min.js') }}" defer></script>
+
 
 
 <script>

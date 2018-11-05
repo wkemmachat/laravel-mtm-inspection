@@ -23,7 +23,7 @@ const app = new Vue({
     el: '#app'
 });
 
-// import $ from 'jquery';
-// window.$ = window.jQuery = $;
-// import 'jquery-ui/ui/widgets/datepicker.js';
+ import $ from 'jquery';
+ window.$ = window.jQuery = $;
+ import 'jquery-ui/ui/widgets/datepicker.js';
 //add as many widget as you may need
