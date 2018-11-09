@@ -66,8 +66,12 @@
                                     <a class="dropdown-item" href="{{ route('inspection.index') }}"><font color='green'>Repair</font></a>
                                     <a class="dropdown-item" href="{{ route('inspection.data') }}"><font color='green'>Repair Data</font></a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">New Tank</a>
-                                    <a class="dropdown-item" href="#">New Tank Data</a>
+                                    <a class="dropdown-item" href="{{ route('dot.index') }}">New Tank WELDING</a>
+                                    <a class="dropdown-item" href="{{ route('dot.show_fg') }}">New Tank FG</a>
+                                    <a class="dropdown-item" href="{{ route('dot.data') }}">New Tank Data</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="{{ route('customer.index') }}"><font color='brown'>Customer</font></a>
+                                    <a class="dropdown-item" href="{{ route('customer.data') }}"><font color='brown'>Customer Data</font></a>
                                 </div>
                             </li>
 
@@ -168,6 +172,20 @@
         });
 
         $('#expand_div').hide();
+
+
+        document.getElementById('C1').style.display ='none';
+        document.getElementById('C2').style.display ='none';
+        document.getElementById('CM1').style.display ='none';
+        document.getElementById('CM2').style.display ='none';
+
+        document.getElementById('F1').style.display ='none';
+        document.getElementById('F2').style.display ='none';
+        document.getElementById('FM1').style.display ='none';
+        document.getElementById('FM2').style.display ='none';
+
+        document.getElementById('S1').style.display ='none';
+        document.getElementById('S2').style.display ='none';
 
 
     });

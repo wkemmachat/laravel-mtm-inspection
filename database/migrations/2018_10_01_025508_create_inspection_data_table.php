@@ -23,6 +23,9 @@ class CreateInspectionDataTable extends Migration
             $table->string('serial_number');
             $table->string('manufacturer_name');
             $table->string('pass_or_not');
+            $table->string('customer_name');
+            $table->string('repair_part');
+            $table->decimal('tare_weight',6,2);
             $table->string('volumn1')->nullable();
             $table->string('volumn2')->nullable();
             // $table->unsignedInteger('views')->default(0);
