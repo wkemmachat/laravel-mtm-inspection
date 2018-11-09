@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class dot extends Model
+class Dot extends Model
 {
     protected $fillable = [ 'fg_date','weld_date'
                             ,'bottom','longitudinal'
