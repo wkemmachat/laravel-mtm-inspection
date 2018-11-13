@@ -17,6 +17,9 @@
         $retest_date_send_back = "";
     }
 
+    if(empty($repair_part_send_back)){
+        $repair_part_send_back = "";
+    }
 
 
 
@@ -325,37 +328,37 @@
                                         <legend class="col-form-label col-sm-2 pt-0"><strong><font color="blue">Repair Type</font></strong> <font color='red'>*</font></legend>
                                         <div class="col-sm-10">
                                             <div class="form-check custom-control-inline">
-                                                <input class="form-check-input" type="radio" name="repair_part" id="repair_part" value="P" checked required>
+                                                <input class="form-check-input" type="radio" name="repair_part" id="repair_part" value="P" {{ $repair_part_send_back === "P" ? "checked" : "" }} required>
                                                 <label class="form-check-label" for="gridRadios1">
                                                     P
                                                 </label>
                                             </div>
                                             <div class="form-check custom-control-inline">
-                                                <input class="form-check-input" type="radio" name="repair_part" id="repair_part" value="C" >
+                                                <input class="form-check-input" type="radio" name="repair_part" id="repair_part" value="C" {{ $repair_part_send_back === "C" ? "checked" : "" }}>
                                                 <label class="form-check-label" for="gridRadios1">
                                                     C
                                                 </label>
                                             </div>
                                             <div class="form-check custom-control-inline">
-                                                <input class="form-check-input" type="radio" name="repair_type" id="repair_part" value="C+F" >
+                                                <input class="form-check-input" type="radio" name="repair_part" id="repair_part" value="C+F" {{ $repair_part_send_back === "C+F" ? "checked" : "" }}>
                                                 <label class="form-check-label" for="gridRadios1">
                                                     C+F
                                                 </label>
                                             </div>
                                             <div class="form-check custom-control-inline">
-                                                <input class="form-check-input" type="radio" name="repair_part" id="repair_part" value="B" >
+                                                <input class="form-check-input" type="radio" name="repair_part" id="repair_part" value="B" {{ $repair_part_send_back === "B" ? "checked" : "" }}>
                                                 <label class="form-check-label" for="gridRadios1">
                                                     B
                                                 </label>
                                             </div>
                                             <div class="form-check custom-control-inline">
-                                                <input class="form-check-input" type="radio" name="repair_part" id="repair_part" value="C+B" >
+                                                <input class="form-check-input" type="radio" name="repair_part" id="repair_part" value="C+B" {{ $repair_part_send_back === "C+B" ? "checked" : "" }}>
                                                 <label class="form-check-label" for="gridRadios1">
                                                     C+B
                                                 </label>
                                             </div>
                                             <div class="form-check custom-control-inline">
-                                                <input class="form-check-input" type="radio" name="repair_part" id="repair_part" value="F" >
+                                                <input class="form-check-input" type="radio" name="repair_part" id="repair_part" value="F" {{ $repair_part_send_back === "F" ? "checked" : "" }}>
                                                 <label class="form-check-label" for="gridRadios1">
                                                     F
                                                 </label>

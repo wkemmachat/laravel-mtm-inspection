@@ -105,10 +105,6 @@ class InspectionController extends Controller
             }
 
 
-            // if(strlen(trim($request->serial_number))<>12){
-            //     Session::flash('error', 'Serial is invalid');
-            //     return view('inspection.index')->with('inspectionArray',Inspection::orderby('created_at', 'desc')->take(10)->get());
-            // }
 
             if(strlen(trim($request->manu_month_year))<>5){
                 Session::flash('error', 'Manufacturing month and year is invalid');
@@ -163,7 +159,8 @@ class InspectionController extends Controller
                                            ->with('factory_name_send_back',$request->factory_name)
                                            ->with('size_send_back',$request->size)
                                            ->with('retest_date_send_back',$request->retest_date)
-                                           ->with('customer_name_send_back',$request->customer_name);
+                                           ->with('customer_name_send_back',$request->customer_name)
+                                           ->with('repair_part_send_back',$request->repair_part);
 
         }
 

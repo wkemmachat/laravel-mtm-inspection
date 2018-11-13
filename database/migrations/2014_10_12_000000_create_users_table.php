@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             // kem edit
             $table->boolean('status')->default(0);
             $table->string('verifiedToken')->nullable();
+            $table->string('role')->default("");
         });
     }
 

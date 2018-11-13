@@ -59,4 +59,19 @@ class LoginController extends Controller
         // return $request->only($this->username(), 'password');
         return ['name'=>$request->{$this->username()},'password'=>$request->password,'status'=>'1'];
     }
+
+
+    public function authenticated($request , $user){
+        if($user->role=='root'){
+            return redirect()->route('inspection.index') ;
+        }elseif($user->role=='fg'){
+            return redirect()->route('dot.show_fg') ;
+        }
+        elseif($user->role=='welding'){
+            return redirect()->route('dot.index') ;
+        }
+        elseif($user->role=='repair'){
+            return redirect()->route('inspection.index') ;
+        }
+    }
 }

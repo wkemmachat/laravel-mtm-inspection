@@ -14,31 +14,31 @@
 
 Auth::routes();
 
-Route::post('/inspection', 'InspectionController@store')->name('inspection.store')->middleware('auth');
-Route::delete('/inspection/delete/{inspection}', 'InspectionController@destroy')->name('inspection.delete')->middleware('auth');
-Route::get('/inspection_data', 'InspectionController@data')->name('inspection.data')->middleware('auth');
+Route::post('/inspection', 'InspectionController@store')->name('inspection.store')->middleware('auth','roleRepair');
+Route::delete('/inspection/delete/{inspection}', 'InspectionController@destroy')->name('inspection.delete')->middleware('auth','roleRepair');
+Route::get('/inspection_data', 'InspectionController@data')->name('inspection.data')->middleware('auth','roleRoot');
 
-Route::get('/dot', 'DotController@index')->name('dot.index')->middleware('auth');
-Route::post('/dot', 'DotController@store')->name('dot.store')->middleware('auth');
-Route::delete('/dot/delete/{dot}', 'DotController@destroy')->name('dot.delete')->middleware('auth');
-Route::get('/dot_data', 'DotController@data')->name('dot.data')->middleware('auth');
+Route::get('/dot', 'DotController@index')->name('dot.index')->middleware('auth','roleWelding');
+Route::post('/dot', 'DotController@store')->name('dot.store')->middleware('auth','roleWelding');
+Route::delete('/dot/delete/{dot}', 'DotController@destroy')->name('dot.delete')->middleware('auth','roleWelding');
+Route::get('/dot_data', 'DotController@data')->name('dot.data')->middleware('auth','roleRoot');
 
-Route::get('/dot_fg', 'DotController@show_fg')->name('dot.show_fg')->middleware('auth');
-Route::post('/dot_fg', 'DotController@fg_store')->name('dot.fg_store')->middleware('auth');
+Route::get('/dot_fg', 'DotController@show_fg')->name('dot.show_fg')->middleware('auth','roleFg');
+Route::post('/dot_fg', 'DotController@fg_store')->name('dot.fg_store')->middleware('auth','roleFg');
 
 
-Route::get('/customer', 'CustomerController@index')->name('customer.index')->middleware('auth');
-Route::post('/customer', 'CustomerController@store')->name('customer.store')->middleware('auth');
-Route::get('/customer/edit/{id}', 'CustomerController@edit')->name('customer.edit')->middleware('auth');
-Route::post('/customer/edit', 'CustomerController@editsave')->name('customer.editsave')->middleware('auth');
-Route::get('/customer_data', 'CustomerController@data')->name('customer.data')->middleware('auth');
+Route::get('/customer', 'CustomerController@index')->name('customer.index')->middleware('auth','roleRoot');
+Route::post('/customer', 'CustomerController@store')->name('customer.store')->middleware('auth','roleRoot');
+Route::get('/customer/edit/{id}', 'CustomerController@edit')->name('customer.edit')->middleware('auth','roleRoot');
+Route::post('/customer/edit', 'CustomerController@editsave')->name('customer.editsave')->middleware('auth','roleRoot');
+Route::get('/customer_data', 'CustomerController@data')->name('customer.data')->middleware('auth','roleRoot');
 
 
 Route::get('/logout','LogoutController@index')->name('logout.logout');
 
 Route::get('/test','TestController@index')->name('test');
 
-Route::get('/', 'InspectionController@index')->name('inspection.index')->middleware('auth');
+Route::get('/', 'InspectionController@index')->name('inspection.index')->middleware('auth','roleRepair');
 
 
 Route::post('/exportInspection', 'InspectionController@exportInspection')->name('inspection.exportInspection');
