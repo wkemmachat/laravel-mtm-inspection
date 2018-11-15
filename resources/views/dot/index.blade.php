@@ -470,7 +470,7 @@
     </div>
     @if(!empty($dotArray))
         <div class="mt-3">
-            <h2>Results (Last 10 records)</h2>
+            <h2>Last 15 hrs results -  ( <font color='red'>{{$dotArray->count()}}</font> records) by <font color='blue'> {{Auth::user()->name}} </font></h2>
             <table class="table table-striped table-bordered">
                 <thead class="table-warning">
                 <tr>

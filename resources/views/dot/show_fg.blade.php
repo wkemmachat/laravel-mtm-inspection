@@ -127,7 +127,7 @@
 
                                 </td>
                                 <td class="text-center">
-                                        <form class="form-delete" method="post" action="{{ route('dot.delete', [$dotInLoop->id]) }}">
+                                        <form class="form-delete" method="post" action="{{ route('dot.delete_fg', [$dotInLoop->id]) }}">
                                             @method('DELETE')
                                             @csrf
                                             <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">x</button>

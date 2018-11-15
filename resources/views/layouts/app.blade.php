@@ -63,15 +63,27 @@
                                     <font color="green">Data</font>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('inspection.index') }}"><font color='green'>Repair</font></a>
-                                    <a class="dropdown-item" href="{{ route('inspection.data') }}"><font color='green'>Repair Data</font></a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="{{ route('dot.index') }}">New Tank WELDING</a>
-                                    <a class="dropdown-item" href="{{ route('dot.show_fg') }}">New Tank FG</a>
-                                    <a class="dropdown-item" href="{{ route('dot.data') }}">New Tank Data</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="{{ route('customer.index') }}"><font color='brown'>Customer</font></a>
-                                    <a class="dropdown-item" href="{{ route('customer.data') }}"><font color='brown'>Customer Data</font></a>
+                                    @if (Auth::user()->role==="root"||Auth::user()->role==="repair")
+                                        <a class="dropdown-item" href="{{ route('inspection.index') }}"><font color='green'>Repair</font></a>
+                                    @endif
+                                    @if (Auth::user()->role==="root"||Auth::user()->role==="welding")
+                                        <a class="dropdown-item" href="{{ route('dot.index') }}">New Tank WELDING</a>
+                                    @endif
+                                    @if (Auth::user()->role==="root"||Auth::user()->role==="fg")
+                                        <a class="dropdown-item" href="{{ route('dot.show_fg') }}">New Tank FG</a>
+                                    @endif
+
+                                    @if (Auth::user()->role==="root")
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="{{ route('inspection.data') }}"><font color='green'>Repair Data</font></a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="{{ route('dot.data') }}">New Tank Data</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="{{ route('customer.index') }}"><font color='brown'>Customer</font></a>
+                                        <a class="dropdown-item" href="{{ route('customer.data') }}"><font color='brown'>Customer Data {{Auth::user()->name}}</font></a>
+                                    @endif
+
+
                                 </div>
                             </li>
 

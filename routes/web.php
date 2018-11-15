@@ -21,6 +21,7 @@ Route::get('/inspection_data', 'InspectionController@data')->name('inspection.da
 Route::get('/dot', 'DotController@index')->name('dot.index')->middleware('auth','roleWelding');
 Route::post('/dot', 'DotController@store')->name('dot.store')->middleware('auth','roleWelding');
 Route::delete('/dot/delete/{dot}', 'DotController@destroy')->name('dot.delete')->middleware('auth','roleWelding');
+Route::delete('/dot/delete_fg/{dot}', 'DotController@destroy_fg')->name('dot.delete_fg')->middleware('auth','roleFg');
 Route::get('/dot_data', 'DotController@data')->name('dot.data')->middleware('auth','roleRoot');
 
 Route::get('/dot_fg', 'DotController@show_fg')->name('dot.show_fg')->middleware('auth','roleFg');
@@ -41,7 +42,12 @@ Route::get('/test','TestController@index')->name('test');
 Route::get('/', 'InspectionController@index')->name('inspection.index')->middleware('auth','roleRepair');
 
 
+
+/* Export */
+
+
 Route::post('/exportInspection', 'InspectionController@exportInspection')->name('inspection.exportInspection');
+Route::post('/exportDot', 'DotController@exportDot')->name('dot.exportDot');
 
 Route::get('/exportUser', 'InspectionController@exportUser')->name('inspection.exportUser');
 

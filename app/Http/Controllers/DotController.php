@@ -10,9 +10,11 @@ use App\Http\Requests\AskQuestionRequest;
 use Carbon\Carbon;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\InspectionsExport;
+use App\Exports\DotExport;
+
 use App\Exports\UsersExport;
 use Session;
-
+use Auth;
 class DotController extends Controller
 {
 
@@ -23,8 +25,20 @@ class DotController extends Controller
     public function index()
     {
         // $questions = Question::with('user')->latest()->paginate(10);
+        // return Inspection::where('retest_date','>=',$this->startDate)->where('retest_date','<=',$this->endDate);
+        // $date = "2016-11-24 11:59:56";
+        $carbon_date_nowPlus1hr = Carbon::now();
+        $carbon_date_nowSub15hr = Carbon::now();
+        $carbon_date_nowSub15hr->subHours(15);
+        $carbon_date_nowPlus1hr->addHours(1);
 
-        return view('dot.index') ->with('dotArray',Dot::orderby('updated_at', 'desc')->take(10)->get())
+        $dotArray = Dot::where([
+            ['created_at', '>=', $carbon_date_nowSub15hr],
+            ['created_at', '<=', $carbon_date_nowPlus1hr],
+            ['user_id', '=', Auth::user()->id]
+        ])->orderby('updated_at', 'desc')->get();
+
+        return view('dot.index') ->with('dotArray',$dotArray)
                                 ->with('customerActiveArray',Customer::where('isActive', 'Y')->orderby('customer_name','asc')->get())
                                 ->with('dateShow',Carbon::now());
 
@@ -126,9 +140,15 @@ class DotController extends Controller
         $dotArray = Dot::orderBy('updated_at', 'desc')->paginate(10);
 
 
-        return view('dot.data') ->with('dotArray',$inspectionArray);
+        return view('dot.data') ->with('dotArray',$dotArray);
 
     }
+
+    public function exportDot(Request $request)
+    {
+        return Excel::download(new DotExport($request), 'dots.xlsx');
+    }
+
     /*
     public function exportInspection(Request $request)
     {
@@ -146,9 +166,41 @@ class DotController extends Controller
         $dot->delete();
         Session::flash('success', 'You succesfully delete data.');
 
-        return view('dot.index') ->with('dotArray',Dot::orderby('updated_at', 'desc')->take(10)->get())
+        $carbon_date_nowPlus1hr = Carbon::now();
+        $carbon_date_nowSub15hr = Carbon::now();
+        $carbon_date_nowSub15hr->subHours(15);
+        $carbon_date_nowPlus1hr->addHours(1);
+
+        $dotArray = Dot::where([
+            ['created_at', '>=', $carbon_date_nowSub15hr],
+            ['created_at', '<=', $carbon_date_nowPlus1hr],
+            ['user_id', '=', Auth::user()->id]
+        ])->orderby('updated_at', 'desc')->get();
+
+
+        return view('dot.index') ->with('dotArray',$dotArray)
                                  ->with('customerActiveArray',Customer::where('isActive', 'Y')->orderby('customer_name','asc')->get())
                                  ->with('dateShow',Carbon::now());
+
+    }
+
+    public function destroy_fg(Dot $dot)
+    {
+
+        // update data
+        $dot->fg_date       = null;
+        $dot->tare_weight   = 0;
+        $dot->user_key_fg_id  = null;
+        $dot->save();
+
+        Session::flash('success', 'You succesfully delete data.');
+
+        $dotArray = Dot::whereNotNull('user_key_fg_id')->orderby('updated_at', 'desc')->take(10)->get();
+
+        return view('dot.show_fg') ->with('dotArray',$dotArray)
+                        ->with('customerActiveArray',Customer::where('isActive', 'Y')->orderby('customer_name','asc')->get())
+                        ->with('dateShow',Carbon::now());
+
 
     }
 
@@ -184,7 +236,20 @@ class DotController extends Controller
 
             if($dotObj->count()>=1){
                 Session::flash('error', 'Your serial number is duplicated');
-                return view('dot.index')->with('dotArray',Dot::orderby('updated_at', 'desc')->take(10)->get())
+
+                $carbon_date_nowPlus1hr = Carbon::now();
+                $carbon_date_nowSub15hr = Carbon::now();
+                $carbon_date_nowSub15hr->subHours(15);
+                $carbon_date_nowPlus1hr->addHours(1);
+
+                $dotArray = Dot::where([
+                    ['created_at', '>=', $carbon_date_nowSub15hr],
+                    ['created_at', '<=', $carbon_date_nowPlus1hr],
+                    ['user_id', '=', Auth::user()->id]
+                ])->orderby('updated_at', 'desc')->get();
+
+
+                return view('dot.index')->with('dotArray',$dotArray)
                                         ->with('circle_send_back',$request->circle)
                                         ->with('customer_id_send_back',$request->customer_id)
                                         ->with('customerActiveArray',Customer::where('isActive', 'Y')->orderby('customer_name','asc')->get())
@@ -211,7 +276,20 @@ class DotController extends Controller
 
                 $dot->save();
                 Session::flash('success', 'Your data has been submitted');
-                return view('dot.index')->with('dotArray',Dot::orderby('updated_at', 'desc')->take(10)->get())
+
+                $carbon_date_nowPlus1hr = Carbon::now();
+                $carbon_date_nowSub15hr = Carbon::now();
+                $carbon_date_nowSub15hr->subHours(15);
+                $carbon_date_nowPlus1hr->addHours(1);
+
+                $dotArray = Dot::where([
+                    ['created_at', '>=', $carbon_date_nowSub15hr],
+                    ['created_at', '<=', $carbon_date_nowPlus1hr],
+                    ['user_id', '=', Auth::user()->id]
+                ])->orderby('updated_at', 'desc')->get();
+
+
+                return view('dot.index')->with('dotArray',$dotArray)
                                         ->with('circle_send_back',$request->circle)
                                         ->with('customer_id_send_back',$request->customer_id)
                                         ->with('customerActiveArray',Customer::where('isActive', 'Y')->orderby('customer_name','asc')->get())

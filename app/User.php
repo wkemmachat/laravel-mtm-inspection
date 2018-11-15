@@ -101,4 +101,6 @@ class User extends Authenticatable
         $model->votes_count = $upVotes + $downVotes;
         $model->save();
     }
+
+
 }
