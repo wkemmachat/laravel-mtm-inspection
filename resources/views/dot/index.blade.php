@@ -7,7 +7,12 @@
     if(empty($customer_id_send_back)){
         $customer_id_send_back = "";
     }
-
+    if(empty($top_send_back)){
+        $top_send_back = "";
+    }
+    if(empty($bottom_send_back)){
+        $bottom_send_back = "";
+    }
 
 
 
@@ -67,63 +72,63 @@
                                     <div class="col-sm-10">
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="top" id="top" value="blue"  required>
+                                            <input class="form-check-input" type="radio" name="top" id="top" value="blue" {{ $top_send_back == "blue" ? "checked" : "" }}  required>
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="blue">Blue</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="top" id="top" value="red"  required>
+                                            <input class="form-check-input" type="radio" name="top" id="top" value="red" {{ $top_send_back == "red" ? "checked" : "" }} required>
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="red">Red</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="top" id="top" value="green"  required>
+                                            <input class="form-check-input" type="radio" name="top" id="top" value="green" {{ $top_send_back == "green" ? "checked" : "" }} required>
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="green">Green</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="top" id="top" value="white"  required>
+                                            <input class="form-check-input" type="radio" name="top" id="top" value="white" {{ $top_send_back == "white" ? "checked" : "" }} required>
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="black">White</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="top" id="top" value="grey"  required>
+                                            <input class="form-check-input" type="radio" name="top" id="top" value="grey" {{ $top_send_back == "grey" ? "checked" : "" }} required>
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="grey">Grey</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="top" id="top" value="orange"  required>
+                                            <input class="form-check-input" type="radio" name="top" id="top" value="orange" {{ $top_send_back == "orange" ? "checked" : "" }} required>
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="orange">Orange</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="top" id="top" value="yellow"  required>
+                                            <input class="form-check-input" type="radio" name="top" id="top" value="yellow" {{ $top_send_back == "yellow" ? "checked" : "" }} required>
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="yellow">Yellow</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="top" id="top" value="purple"  required>
+                                            <input class="form-check-input" type="radio" name="top" id="top" value="yellow" {{ $top_send_back == "yellow" ? "checked" : "" }}  required>
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="purple">Purple</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="top" id="top" value="pink"  required>
+                                            <input class="form-check-input" type="radio" name="top" id="top" value="pink"  {{ $top_send_back == "pink" ? "checked" : "" }} required>
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="pink">Pink</font>
                                             </label>
@@ -142,63 +147,63 @@
                                     <div class="col-sm-10">
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="bottom" id="bottom" value="blue"  required>
+                                            <input class="form-check-input" type="radio" name="bottom" id="bottom" value="blue" {{ $bottom_send_back == "blue" ? "checked" : "" }}  required>
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="blue">Blue</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="bottom" id="bottom" value="red"  required>
+                                            <input class="form-check-input" type="radio" name="bottom" id="bottom" value="red" {{ $bottom_send_back == "red" ? "checked" : "" }} required>
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="red">Red</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="bottom" id="bottom" value="green"  required>
+                                            <input class="form-check-input" type="radio" name="bottom" id="bottom" value="green" {{ $bottom_send_back == "green" ? "checked" : "" }} required>
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="green">Green</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="bottom" id="bottom" value="white"  required>
+                                            <input class="form-check-input" type="radio" name="bottom" id="bottom" value="white" {{ $bottom_send_back == "white" ? "checked" : "" }} required>
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="black">White</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="bottom" id="bottom" value="grey"  required>
+                                            <input class="form-check-input" type="radio" name="bottom" id="bottom" value="grey" {{ $bottom_send_back == "grey" ? "checked" : "" }} required>
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="grey">Grey</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="bottom" id="bottom" value="orange"  required>
+                                            <input class="form-check-input" type="radio" name="bottom" id="bottom" value="orange"  {{ $bottom_send_back == "orange" ? "checked" : "" }} required>
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="orange">Orange</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="bottom" id="bottom" value="yellow"  required>
+                                            <input class="form-check-input" type="radio" name="bottom" id="bottom" value="yellow" {{ $bottom_send_back == "yellow" ? "checked" : "" }} required>
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="yellow">Yellow</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="bottom" id="bottom" value="purple"  required>
+                                            <input class="form-check-input" type="radio" name="bottom" id="bottom" value="purple" {{ $bottom_send_back == "purple" ? "checked" : "" }} required>
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="purple">Purple</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="bottom" id="bottom" value="pink"  required>
+                                            <input class="form-check-input" type="radio" name="bottom" id="bottom" value="pink" {{ $bottom_send_back == "pink" ? "checked" : "" }} required>
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="pink">Pink</font>
                                             </label>
@@ -321,7 +326,7 @@
                                         </div>
 
                                         <div id="CM1">
-                                            @for ($i = 1; $i <= 5; $i++)
+                                            @for ($i = 1; $i <= 4; $i++)
                                                 <div class="form-check custom-control-inline">
                                                     <input class="form-check-input" type="radio" name="collar" id="collar" value="M1-{{$i}}"  required>
                                                     <label class="form-check-label" for="gridRadios1">
@@ -333,7 +338,7 @@
                                         </div>
 
                                         <div id="CM2">
-                                        @for ($i = 1; $i <= 5; $i++)
+                                        @for ($i = 1; $i <= 4; $i++)
                                         <div class="form-check custom-control-inline">
                                             <input class="form-check-input" type="radio" name="collar" id="collar" value="M2-{{$i}}"  required>
                                             <label class="form-check-label" for="gridRadios1">
@@ -410,7 +415,7 @@
                                         </div>
 
                                         <div id="FM1">
-                                        @for ($i = 1; $i <= 5; $i++)
+                                        @for ($i = 5; $i <= 9; $i++)
                                             <div class="form-check custom-control-inline">
                                                 <input class="form-check-input" type="radio" name="footring" id="footring" value="M1-{{$i}}"  required>
                                                 <label class="form-check-label" for="gridRadios1">
@@ -422,7 +427,7 @@
                                         </div>
 
                                         <div id="FM2">
-                                        @for ($i = 1; $i <= 5; $i++)
+                                        @for ($i = 5; $i <= 9; $i++)
                                         <div class="form-check custom-control-inline">
                                             <input class="form-check-input" type="radio" name="footring" id="footring" value="M2-{{$i}}"  required>
                                             <label class="form-check-label" for="gridRadios1">
@@ -443,15 +448,193 @@
                                     <legend class="col-form-label col-sm-2 pt-0"><strong><font color="blue">Circular</font></strong> <font color='red'>*</font></legend>
                                     <div class="col-sm-10">
 
-                                        @for ($i = 1; $i <= 22; $i++)
-                                            <div class="form-check custom-control-inline">
-                                                <input class="form-check-input" type="radio" name="circle" id="circle" value="{{$i}}"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
-                                                <label class="form-check-label" for="gridRadios1">
-                                                    <font color="green">{{$i}}</font>
-                                                </label>
-                                            </div>
-                                        @endfor
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="1"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">1</font>
+                                            </label>
+                                        </div>
 
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="2"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">2</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="6"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">6</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="7"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">7</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="8"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">8</font>
+                                            </label>
+                                        </div>
+
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="9"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">9</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="10"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">10</font>
+                                            </label>
+                                        </div>
+
+                                        <br/>
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="11"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">11</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="12"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">12</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="13"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">13</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="21"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">21</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="22"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">22</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="23"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">23</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="24"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">24</font>
+                                            </label>
+                                        </div>
+
+                                        <br/>
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="26"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">26</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="27"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">27</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="28"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">28</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="29"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">29</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="31"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">31</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="32"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">32</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="33"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">33</font>
+                                            </label>
+                                        </div>
 
                                     </div>
 

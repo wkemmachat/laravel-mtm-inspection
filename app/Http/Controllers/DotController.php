@@ -251,6 +251,8 @@ class DotController extends Controller
 
                 return view('dot.index')->with('dotArray',$dotArray)
                                         ->with('circle_send_back',$request->circle)
+                                        ->with('top_send_back',$request->top)
+                                        ->with('bottom_send_back',$request->bottom)
                                         ->with('customer_id_send_back',$request->customer_id)
                                         ->with('customerActiveArray',Customer::where('isActive', 'Y')->orderby('customer_name','asc')->get())
                                         ->with('dateShow',Carbon::now());
