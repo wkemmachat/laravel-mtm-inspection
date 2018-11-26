@@ -709,7 +709,6 @@
     @endif
 </div>
 
-<script type="text/javascript">
 
     /*
     function c1_select(){
@@ -776,6 +775,6 @@
     }
     */
 
-</script>
+
 
 @endsection
