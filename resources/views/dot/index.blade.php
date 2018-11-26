@@ -216,6 +216,8 @@
 
                             <hr/>
 
+                            <!-- Spud -->
+
                             <fieldset class="form-group">
                                 <div class="row">
                                     <legend class="col-form-label col-sm-2 pt-0"><strong><font color="blue">Spud</font></strong> <font color='red'>*</font></legend>
@@ -261,6 +263,93 @@
 
                                 </div>
 
+                            </fieldset>
+
+                            <!-- Collar -->
+                            <fieldset class="form-group">
+                                <div class="row">
+                                    <legend class="col-form-label col-sm-2 pt-0"><strong><font color="blue">Collar</font></strong> <font color='red'>*</font></legend>
+                                    <div class="col-sm-10">
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="collar_radio" onclick="c1_select()"  value="" >
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">C1</font>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="collar_radio" onclick="c2_select()" value="" >
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="brown">C2</font>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="collar_radio" onclick="cm1_select()" value="" >
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="blue">M1</font>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="collar_radio" onclick="cm2_select()" value="" >
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="orange">M2</font>
+                                            </label>
+                                        </div>
+
+                                        <br/>
+                                        <br/>
+                                        <div id="C1">
+                                            @for ($i = 1; $i <= 8; $i++)
+                                                <div class="form-check custom-control-inline">
+                                                    <input class="form-check-input" type="radio" name="collar" id="collar" value="C1-{{$i}}"  required>
+                                                    <label class="form-check-label" for="gridRadios1">
+                                                        <font color="green">C1-{{$i}}</font>
+                                                    </label>
+                                                </div>
+                                            @endfor
+                                            <br/>
+                                        </div>
+
+                                        <div id="C2">
+                                            @for ($i = 1; $i <= 8; $i++)
+                                                <div class="form-check custom-control-inline">
+                                                    <input class="form-check-input" type="radio" name="collar" id="collar" value="C2-{{$i}}"  required>
+                                                    <label class="form-check-label" for="gridRadios1">
+                                                        <font color="brown">C2-{{$i}}</font>
+                                                    </label>
+                                                </div>
+                                            @endfor
+                                            <br/>
+                                        </div>
+
+                                        <div id="CM1">
+                                            @for ($i = 1; $i <= 4; $i++)
+                                                <div class="form-check custom-control-inline">
+                                                    <input class="form-check-input" type="radio" name="collar" id="collar" value="M1-{{$i}}"  required>
+                                                    <label class="form-check-label" for="gridRadios1">
+                                                        <font color="blue">M1-{{$i}}</font>
+                                                    </label>
+                                                </div>
+                                            @endfor
+                                            <br/>
+                                        </div>
+
+                                        <div id="CM2">
+                                        @for ($i = 1; $i <= 4; $i++)
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="collar" id="collar" value="M2-{{$i}}"  required>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="orange">M2-{{$i}}</font>
+                                            </label>
+                                        </div>
+                                        @endfor
+                                        </div>
+                                    </div>
+
+                                </div>
                             </fieldset>
 
                             <div class="form-group ">
