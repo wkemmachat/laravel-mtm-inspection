@@ -709,7 +709,7 @@
     @endif
 </div>
 
-<script>
+<script type="text/javascript">
 
     /*
     function c1_select(){
