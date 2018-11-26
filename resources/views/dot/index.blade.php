@@ -711,7 +711,7 @@
 
 <script>
 
-
+    /*
     function c1_select(){
         document.getElementById('C1').style.display ='block';
         document.getElementById('C2').style.display ='none';
@@ -774,7 +774,7 @@
         document.getElementById('S1').style.display ='none';
         document.getElementById('S2').style.display ='block';
     }
-
+    */
 
 </script>
 
