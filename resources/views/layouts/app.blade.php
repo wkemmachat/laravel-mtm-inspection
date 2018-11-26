@@ -249,6 +249,9 @@
         $('#expand_div').hide();
 
 
+        document.getElementById('S1').style.display ='none';
+        document.getElementById('S2').style.display ='none';
+
         document.getElementById('C1').style.display ='none';
         document.getElementById('C2').style.display ='none';
         document.getElementById('CM1').style.display ='none';
@@ -259,8 +262,6 @@
         document.getElementById('FM1').style.display ='none';
         document.getElementById('FM2').style.display ='none';
 
-        document.getElementById('S1').style.display ='none';
-        document.getElementById('S2').style.display ='none';
 
 
     });

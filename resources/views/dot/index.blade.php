@@ -249,16 +249,18 @@
                                         @endfor
                                         <br/>
                                         </div>
+
                                         <div id="S2">
                                         @for ($i = 1; $i <= 8; $i++)
                                             <div class="form-check custom-control-inline">
-                                                <input class="form-check-input" type="radio" name="spud" id="spud" value="S2-{{$i}}"  required>
+                                                <input class="form-check-input" type="radio" name="spud" id="spud" value="S2-{{$i}}"  required />
                                                 <label class="form-check-label" for="gridRadios1">
                                                     <font color="brown">S2-{{$i}}</font>
                                                 </label>
                                             </div>
                                         @endfor
                                         </div>
+
                                     </div>
 
                                 </div>
