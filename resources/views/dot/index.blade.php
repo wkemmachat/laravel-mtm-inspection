@@ -216,6 +216,53 @@
 
                             <hr/>
 
+                            <fieldset class="form-group">
+                                <div class="row">
+                                    <legend class="col-form-label col-sm-2 pt-0"><strong><font color="blue">Spud</font></strong> <font color='red'>*</font></legend>
+                                    <div class="col-sm-10">
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="spud_radio" onclick="s1_select()"  value="" >
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">S1</font>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="spud_radio" onclick="s2_select()" value="" >
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="brown">S2</font>
+                                            </label>
+                                        </div>
+                                        <br/>
+                                        <br/>
+                                        <div id="S1">
+                                        @for ($i = 1; $i <= 8; $i++)
+                                            <div class="form-check custom-control-inline">
+                                                <input class="form-check-input" type="radio" name="spud" id="spud" value="S1-{{$i}}"  required>
+                                                <label class="form-check-label" for="gridRadios1">
+                                                    <font color="green">S1-{{$i}}</font>
+                                                </label>
+                                            </div>
+                                        @endfor
+                                        <br/>
+                                        </div>
+                                        <div id="S2">
+                                        @for ($i = 1; $i <= 8; $i++)
+                                            <div class="form-check custom-control-inline">
+                                                <input class="form-check-input" type="radio" name="spud" id="spud" value="S2-{{$i}}"  required>
+                                                <label class="form-check-label" for="gridRadios1">
+                                                    <font color="brown">S2-{{$i}}</font>
+                                                </label>
+                                            </div>
+                                        @endfor
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </fieldset>
+
                             <div class="form-group ">
                                 <button type="submit" class="btn btn-outline-primary btn-lg">Submit</button>
                             </div>
