@@ -64,7 +64,7 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     @if (Auth::user()->role==="root"||Auth::user()->role==="repair")
-                                        <a class="dropdown-item" href="{{ route('inspection.index') }}"><font color='green'>Repair</font></a>
+                                        <a class="dropdown-item" href="{{ route('inspection.index') }}">Repair</a>
                                     @endif
                                     @if (Auth::user()->role==="root"||Auth::user()->role==="welding")
                                         <a class="dropdown-item" href="{{ route('dot.index') }}">New Tank WELDING</a>
@@ -75,12 +75,12 @@
 
                                     @if (Auth::user()->role==="root")
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="{{ route('inspection.data') }}"><font color='green'>Repair Data</font></a>
+                                        <a class="dropdown-item" href="{{ route('inspection.data') }}">Repair Data</a>
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="{{ route('dot.data') }}">New Tank Data</a>
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="{{ route('customer.index') }}"><font color='brown'>Customer</font></a>
-                                        <a class="dropdown-item" href="{{ route('customer.data') }}"><font color='brown'>Customer Data {{Auth::user()->name}}</font></a>
+                                        <a class="dropdown-item" href="{{ route('customer.data') }}"><font color='brown'>Customer Data</font></a>
                                     @endif
 
 
@@ -143,6 +143,69 @@
           return true;
        }
 
+
+    function c1_select(){
+        document.getElementById('C1').style.display ='block';
+        document.getElementById('C2').style.display ='none';
+        document.getElementById('CM1').style.display ='none';
+        document.getElementById('CM2').style.display ='none';
+    }
+    function c2_select(){
+        document.getElementById('C1').style.display ='none';
+        document.getElementById('C2').style.display ='block';
+        document.getElementById('CM1').style.display ='none';
+        document.getElementById('CM2').style.display ='none';
+    }
+    function cm1_select(){
+        document.getElementById('C1').style.display ='none';
+        document.getElementById('C2').style.display ='none';
+        document.getElementById('CM1').style.display ='block';
+        document.getElementById('CM2').style.display ='none';
+    }
+    function cm2_select(){
+        document.getElementById('C1').style.display ='none';
+        document.getElementById('C2').style.display ='none';
+        document.getElementById('CM1').style.display ='none';
+        document.getElementById('CM2').style.display ='block';
+    }
+
+    function f1_select(){
+        document.getElementById('F1').style.display ='block';
+        document.getElementById('F2').style.display ='none';
+        document.getElementById('FM1').style.display ='none';
+        document.getElementById('FM2').style.display ='none';
+    }
+
+    function f2_select(){
+        document.getElementById('F1').style.display ='none';
+        document.getElementById('F2').style.display ='block';
+        document.getElementById('FM1').style.display ='none';
+        document.getElementById('FM2').style.display ='none';
+    }
+
+    function fm1_select(){
+        document.getElementById('F1').style.display ='none';
+        document.getElementById('F2').style.display ='none';
+        document.getElementById('FM1').style.display ='block';
+        document.getElementById('FM2').style.display ='none';
+    }
+
+    function fm2_select(){
+        document.getElementById('F1').style.display ='none';
+        document.getElementById('F2').style.display ='none';
+        document.getElementById('FM1').style.display ='none';
+        document.getElementById('FM2').style.display ='block';
+    }
+
+    function s1_select(){
+        document.getElementById('S1').style.display ='block';
+        document.getElementById('S2').style.display ='none';
+    }
+
+    function s2_select(){
+        document.getElementById('S1').style.display ='none';
+        document.getElementById('S2').style.display ='block';
+    }
 
     $( document ).ready(function() {
 

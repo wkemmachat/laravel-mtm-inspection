@@ -709,9 +709,74 @@
     @endif
 </div>
 
+<script type="text/javascript">
 
 
+    /*
+    function c1_select(){
+        document.getElementById('C1').style.display ='block';
+        document.getElementById('C2').style.display ='none';
+        document.getElementById('CM1').style.display ='none';
+        document.getElementById('CM2').style.display ='none';
+    }
+    function c2_select(){
+        document.getElementById('C1').style.display ='none';
+        document.getElementById('C2').style.display ='block';
+        document.getElementById('CM1').style.display ='none';
+        document.getElementById('CM2').style.display ='none';
+    }
+    function cm1_select(){
+        document.getElementById('C1').style.display ='none';
+        document.getElementById('C2').style.display ='none';
+        document.getElementById('CM1').style.display ='block';
+        document.getElementById('CM2').style.display ='none';
+    }
+    function cm2_select(){
+        document.getElementById('C1').style.display ='none';
+        document.getElementById('C2').style.display ='none';
+        document.getElementById('CM1').style.display ='none';
+        document.getElementById('CM2').style.display ='block';
+    }
 
+    function f1_select(){
+        document.getElementById('F1').style.display ='block';
+        document.getElementById('F2').style.display ='none';
+        document.getElementById('FM1').style.display ='none';
+        document.getElementById('FM2').style.display ='none';
+    }
 
+    function f2_select(){
+        document.getElementById('F1').style.display ='none';
+        document.getElementById('F2').style.display ='block';
+        document.getElementById('FM1').style.display ='none';
+        document.getElementById('FM2').style.display ='none';
+    }
+
+    function fm1_select(){
+        document.getElementById('F1').style.display ='none';
+        document.getElementById('F2').style.display ='none';
+        document.getElementById('FM1').style.display ='block';
+        document.getElementById('FM2').style.display ='none';
+    }
+
+    function fm2_select(){
+        document.getElementById('F1').style.display ='none';
+        document.getElementById('F2').style.display ='none';
+        document.getElementById('FM1').style.display ='none';
+        document.getElementById('FM2').style.display ='block';
+    }
+
+    function s1_select(){
+        document.getElementById('S1').style.display ='block';
+        document.getElementById('S2').style.display ='none';
+    }
+
+    function s2_select(){
+        document.getElementById('S1').style.display ='none';
+        document.getElementById('S2').style.display ='block';
+    }
+    */
+
+</scritp>
 
 @endsection
