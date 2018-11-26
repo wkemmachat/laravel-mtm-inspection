@@ -223,14 +223,14 @@
                                     <div class="col-sm-10">
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="spud_radio" onclick="s1_select()"  value="" >
+                                            <input class="form-check-input" type="radio" name="spud_radio"   value="" >
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="green">S1</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="spud_radio" onclick="s2_select()" value="" >
+                                            <input class="form-check-input" type="radio" name="spud_radio"  value="" >
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="brown">S2</font>
                                             </label>
@@ -272,28 +272,28 @@
                                     <div class="col-sm-10">
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="collar_radio" onclick="c1_select()"  value="" >
+                                            <input class="form-check-input" type="radio" name="collar_radio"   value="" >
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="green">C1</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="collar_radio" onclick="c2_select()" value="" >
+                                            <input class="form-check-input" type="radio" name="collar_radio"  value="" >
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="brown">C2</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="collar_radio" onclick="cm1_select()" value="" >
+                                            <input class="form-check-input" type="radio" name="collar_radio"  value="" >
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="blue">M1</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="collar_radio" onclick="cm2_select()" value="" >
+                                            <input class="form-check-input" type="radio" name="collar_radio"  value="" >
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="orange">M2</font>
                                             </label>
@@ -361,28 +361,28 @@
 
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="footring_radio" onclick="f1_select()"  value="" >
+                                            <input class="form-check-input" type="radio" name="footring_radio"   value="" >
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="green">F1</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="footring_radio" onclick="f2_select()" value="" >
+                                            <input class="form-check-input" type="radio" name="footring_radio"  value="" >
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="brown">F2</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="footring_radio" onclick="fm1_select()" value="" >
+                                            <input class="form-check-input" type="radio" name="footring_radio"  value="" >
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="blue">M1</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="footring_radio" onclick="fm2_select()" value="" >
+                                            <input class="form-check-input" type="radio" name="footring_radio"  value="" >
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="orange">M2</font>
                                             </label>

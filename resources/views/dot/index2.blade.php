@@ -223,14 +223,14 @@
                                     <div class="col-sm-10">
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="spud_radio" onclick="s1_select();"  value="" >
+                                            <input class="form-check-input" type="radio" name="spud_radio" onclick="s1_select()"  value="" >
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="green">S1</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="spud_radio" onclick="s2_select();" value="" >
+                                            <input class="form-check-input" type="radio" name="spud_radio" onclick="s2_select()" value="" >
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="brown">S2</font>
                                             </label>
@@ -272,28 +272,28 @@
                                     <div class="col-sm-10">
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="collar_radio" onclick="c1_select();"  value="" >
+                                            <input class="form-check-input" type="radio" name="collar_radio" onclick="c1_select()"  value="" >
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="green">C1</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="collar_radio" onclick="c2_select();" value="" >
+                                            <input class="form-check-input" type="radio" name="collar_radio" onclick="c2_select()" value="" >
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="brown">C2</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="collar_radio" onclick="cm1_select();" value="" >
+                                            <input class="form-check-input" type="radio" name="collar_radio" onclick="cm1_select()" value="" >
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="blue">M1</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="collar_radio" onclick="cm2_select();" value="" >
+                                            <input class="form-check-input" type="radio" name="collar_radio" onclick="cm2_select()" value="" >
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="orange">M2</font>
                                             </label>
@@ -361,28 +361,28 @@
 
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="footring_radio" onclick="f1_select();"  value="" >
+                                            <input class="form-check-input" type="radio" name="footring_radio" onclick="f1_select()"  value="" >
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="green">F1</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="footring_radio" onclick="f2_select();" value="" >
+                                            <input class="form-check-input" type="radio" name="footring_radio" onclick="f2_select()" value="" >
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="brown">F2</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="footring_radio" onclick="fm1_select();" value="" >
+                                            <input class="form-check-input" type="radio" name="footring_radio" onclick="fm1_select()" value="" >
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="blue">M1</font>
                                             </label>
                                         </div>
 
                                         <div class="form-check custom-control-inline">
-                                            <input class="form-check-input" type="radio" name="footring_radio" onclick="fm2_select();" value="" >
+                                            <input class="form-check-input" type="radio" name="footring_radio" onclick="fm2_select()" value="" >
                                             <label class="form-check-label" for="gridRadios1">
                                                 <font color="orange">M2</font>
                                             </label>
@@ -709,74 +709,9 @@
     @endif
 </div>
 
-<script type="text/javascript">
 
 
-    /*
-    function c1_select(){
-        document.getElementById('C1').style.display ='block';
-        document.getElementById('C2').style.display ='none';
-        document.getElementById('CM1').style.display ='none';
-        document.getElementById('CM2').style.display ='none';
-    }
-    function c2_select(){
-        document.getElementById('C1').style.display ='none';
-        document.getElementById('C2').style.display ='block';
-        document.getElementById('CM1').style.display ='none';
-        document.getElementById('CM2').style.display ='none';
-    }
-    function cm1_select(){
-        document.getElementById('C1').style.display ='none';
-        document.getElementById('C2').style.display ='none';
-        document.getElementById('CM1').style.display ='block';
-        document.getElementById('CM2').style.display ='none';
-    }
-    function cm2_select(){
-        document.getElementById('C1').style.display ='none';
-        document.getElementById('C2').style.display ='none';
-        document.getElementById('CM1').style.display ='none';
-        document.getElementById('CM2').style.display ='block';
-    }
 
-    function f1_select(){
-        document.getElementById('F1').style.display ='block';
-        document.getElementById('F2').style.display ='none';
-        document.getElementById('FM1').style.display ='none';
-        document.getElementById('FM2').style.display ='none';
-    }
 
-    function f2_select(){
-        document.getElementById('F1').style.display ='none';
-        document.getElementById('F2').style.display ='block';
-        document.getElementById('FM1').style.display ='none';
-        document.getElementById('FM2').style.display ='none';
-    }
-
-    function fm1_select(){
-        document.getElementById('F1').style.display ='none';
-        document.getElementById('F2').style.display ='none';
-        document.getElementById('FM1').style.display ='block';
-        document.getElementById('FM2').style.display ='none';
-    }
-
-    function fm2_select(){
-        document.getElementById('F1').style.display ='none';
-        document.getElementById('F2').style.display ='none';
-        document.getElementById('FM1').style.display ='none';
-        document.getElementById('FM2').style.display ='block';
-    }
-
-    function s1_select(){
-        document.getElementById('S1').style.display ='block';
-        document.getElementById('S2').style.display ='none';
-    }
-
-    function s2_select(){
-        document.getElementById('S1').style.display ='none';
-        document.getElementById('S2').style.display ='block';
-    }
-    */
-
-</scritp>
 
 @endsection
