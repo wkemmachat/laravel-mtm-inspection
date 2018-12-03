@@ -443,7 +443,7 @@
                             </fieldset>
 
                             <!-- Circle -->
-                            <fieldset class="form-group">
+                            {{--  <fieldset class="form-group">
                                 <div class="row">
                                     <legend class="col-form-label col-sm-2 pt-0"><strong><font color="blue">Circular</font></strong> <font color='red'>*</font></legend>
                                     <div class="col-sm-10">
@@ -639,7 +639,14 @@
                                     </div>
 
                                 </div>
-                            </fieldset>
+                            </fieldset>  --}}
+
+                            <div class="form-group row">
+                                <label for="serial_number" class="col-sm-2 col-form-label"><strong><font color="blue">CIRCLE</font></strong> <font color='red'>*</font></label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="circle" value="" id="circle" class="form-control {{ $errors->has('circle') ? 'is-invalid' : '' }}" required>
+                                </div>
+                            </div>
 
                             <!-- End circle -->
 
