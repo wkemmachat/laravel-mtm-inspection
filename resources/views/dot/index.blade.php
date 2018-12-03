@@ -443,7 +443,203 @@
                             </fieldset>
 
                             <!-- Circle -->
+                            <fieldset class="form-group">
+                                <div class="row">
+                                    <legend class="col-form-label col-sm-2 pt-0"><strong><font color="blue">Circular</font></strong> <font color='red'>*</font></legend>
+                                    <div class="col-sm-10">
 
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="1"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">1</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="2"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">2</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="6"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">6</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="7"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">7</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="8"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">8</font>
+                                            </label>
+                                        </div>
+
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="9"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">9</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="10"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">10</font>
+                                            </label>
+                                        </div>
+
+                                        <br/>
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="11"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">11</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="12"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">12</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="13"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">13</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="21"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">21</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="22"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">22</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="23"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">23</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="24"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">24</font>
+                                            </label>
+                                        </div>
+
+                                        <br/>
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="26"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">26</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="27"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">27</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="28"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">28</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="29"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">29</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="31"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">31</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="32"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">32</font>
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check custom-control-inline">
+                                            <input class="form-check-input" type="radio" name="circle" id="circle" value="33"  required {{($circle_send_back==$i) ? 'checked' : ''}}>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                <font color="green">33</font>
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </fieldset>
 
                             <!-- End circle -->
 
